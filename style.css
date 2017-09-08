@@ -5,3 +5,15 @@ button{
 	margin: 5px;
 	
 }
+.right{
+	color: green;
+	display: none;
+	width: 200px;
+	height: 200px;
+}
+.wrong{
+	color: red;
+	display: none;
+	width: 200px;
+	height: 200px;
+}

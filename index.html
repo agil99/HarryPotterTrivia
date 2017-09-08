@@ -2,29 +2,42 @@
 <html>
   <head><title>Harry Potter Trivia</title>
   <link rel = "stylesheet" type = "text/css" href = "style.css"/>
+  <script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   </head>
   <body>
     <center>
 		<img src = "hogwartsLogo.jpg" alt = "logo"/>
 		<h3>Which animal is the symbol of Gryffindor</h3>
-		<p id = "correct">Correct!</p>
-		<button  onClick = "alert('Incorrect!')">Snake</button>
-		</br><button class = "correct" type = "button" onClick = "alert('Correct!')">Lion</button>
-		</br><button  onClick = "alert('Incorrect!')">Raven</button>
-		</br><button  onClick = "alert('Incorrect!')">Otter</button>
-		</br><img src = "maraudersMap.jpg" alt = "map"/>
-		<h3>Who are the Marauders?</h3>
-		<button class = "correct" type = 'button' onClick = "alert('Correct!')">Moony, Wormtail, Padfoot, and Prongs</button>
-		</br><button  onClick = "alert('Incorrect!')">Sunny, Rattail, Softfoot, and Antlers</button>
-		</br><button  onClick = "alert('Incorrect!')">Snake</button>
-		</br><button  onClick = "alert('Incorrect!')">Snake</button>
-		</br><img src = "Hedwig.jpg" alt = "owl"/>
+			<img class = "right" src = "thumbsUp.png" alt ="thumbs up"/>
+			<img class = "wrong" src = "thumbsDown.png" alt = "thumbs down"/>
+			<br><button  onClick = "rightOrWrong('wrong')">Snake</button>
+			</br><button  onClick = "rightOrWrong('right')">Lion</button>
+			</br><button  onClick = "rightOrWrong('wrong')">Raven</button>
+			</br><button  onClick = "rightOrWrong('wrong')">Otter</button>
+			</br><img src = "maraudersMap.jpg" alt = "map"/>
+		<h3>Which animal was Sirius' Animagus?</h3>
+			<button  onClick = "rightOrWrong('right')">Dog</button>
+			</br><button  onClick = "rightOrWrong('wrong')">Cat</button>
+			</br><button  onClick = "rightOrWrong('wrong')">Snake</button>
+			</br><button  onClick = "rightOrWrong('wrong')">Owl</button>
+			</br><img src = "Hedwig.jpg" alt = "owl"/>
 		<h3>What is the name of Harry's owl?</h3>
-		<button  onClick = "alert('Incorrect!')">Scabbers</button>
-		</br><button  onClick = "alert('Incorrect!')">Crookshanks</button>
-		</br><button class = "correct" type = 'button' onClick = "alert('Correct!')">Hedwig</button>
-		</br><button  onClick = "alert('Incorrect!')">Nagini</button>
+			<button  onClick = "rightOrWrong('wrong')">Scabbers</button>
+			</br><button  onClick = "rightOrWrong('wrong')">Crookshanks</button>
+			</br><button  onClick = "rightOrWrong('right')">Hedwig</button>
+			</br><button  onClick = "rightOrWrong('wrong')">Nagini</button>
      </center>
+	 <script>
+	 function rightOrWrong(cls){
+		if(cls == 'wrong'){
+			$('.right').hide();
+			$('.wrong').toggle();
+		}else if(cls == 'right'){
+			$('.right').toggle();
+			$('.wrong').hide();
+		}
+	 }
+	</script>
   </body>
 </html>
 
